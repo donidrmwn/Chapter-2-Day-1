@@ -1,150 +1,117 @@
 <html>
     <head>
         <title>My Project</title>
+        <script src="https://kit.fontawesome.com/edac0d230c.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="assets/css/style.css">
-        <script src="https://kit.fontawesome.com/c69343c4a5.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav>
-            <div class="left-side">
-                <img src="assets/images/logo.png" alt="logo">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="my-project.html">My Project</a></li>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand me-5" href="index.html">
+                    <img src="assets/images/logo.png" alt="logo">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item me-5 fs-5">
+                    <a class="nav-link  " aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item fs-5">
+                    <a class="nav-link active fw-bold" href="my-project.html">Add Project</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                   
                 </ul>
+                <div>
+                    <form action="contact-me.html" class="d-flex align-items-center m-auto">
+                        <button class="btn btn-dark px-4 py-1" type="submit">Contact Me</button>
+                    </form>
+                </div>
+              </div>
             </div>
-            <div class="right-side">
-                <a href="contact-me.html">Contact me</a>
-            </div>
-        </nav>
+          </nav>
 
         <!--Form submit Project-->
-        <div class="main-container-project">
-            <div class="main-container-project-form">
-                <div class="container-project-form">
-                    <h1>ADD MY PROJECT</h1>
-                    <form >
-
+        <div class="container-fluid bg-body-secondary h-100 p-5">
+            <div class="container m-auto">
+                <h1 class="text-center fw-bold">ADD MY PROJECT</h1>
+                <div class="container w-50 px-5 mt-4">
+                    <form>
                         <!--Project Name-->
-                        <div>
-                            <label for="projectName">Project Name</label>
-                            <input class="input-size" type="text" id="projectName">
+                        <div class="mb-3">
+                            <label for="projectName" class="fw-semibold fs-5">Project Name</label>
+                            <input class="w-100 border border-0 rounded-1" type="text" id="projectName">
                         </div>
 
                         <!--Project date-->
-                        <div class="project-date-container">
-                            <div class="start-date-container">
-                                <label for="startDate">Start Date</label>
-                                <input class="input-size" type="date" id="startDate">
+                        <div class="d-flex w-100 row m-auto mb-3 p-0 gap-3">
+                            <div class="col p-0">
+                                <label for="startDate" class="fw-semibold fs-5">Start Date</label>
+                                <input class="w-100 border border-0 rounded-1" type="date" id="startDate">
                             </div>
 
-                            <div class="end-date-container">
-                                <label for="endDate">End Date</label>
-                                <input class="input-size"  type="date" id="endDate">
+                            <div class="col p-0">
+                                <label for="endDate" class="fw-semibold fs-5">End Date</label>
+                                <input class="w-100 border border-0 rounded-1"  type="date" id="endDate">
                             </div>
                         </div>
 
                         <!-- Description -->
-                        <div>
-                            <label for="description">Description</label>
-                            <textarea id="description" class="input-size"></textarea>
+                        <div class="mb-3">
+                            <label for="description" class="fw-semibold fs-5">Description</label>
+                            <textarea class="w-100 form-control " id="description"></textarea>
                         </div>
 
                         <!-- Technologies -->
-                        <div class="technologies-container">
-                        <label>Technologies</label>
-                            <div class="technologies-container-list">
-                                    <div class="left-side-technologies">
-                                        <div class="first-row-technology-list">
-                                            <input type="checkbox" id="nodeJs">
-                                            <label for="nodeJs">Node JS</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" id="reactJs">
-                                            <label for="reactJs">React JS</label>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="right-side-technologies">
-                                        <div class="first-row-technology-list">
-                                            <input type="checkbox" id="vueJs">
-                                            <label for="vueJs">Vue JS</label>
-                                        </div>   
-                                        <div>
-                                            <input type="checkbox" id="javaScript">
-                                            <label for="javaScript">Javascript</label>
-                                        </div> 
-                                    </div>
-                                </ul>
+                        <div class="m-auto mb-2">
+                        <label class="fw-semibold fs-5">Technologies</label>
+                            <div class="row m-auto">
+                                <div class="col-6 col-sm-3 p-0 mb-2">
+                                    <input type="checkbox" id="nodeJs">
+                                    <label for="nodeJs">Node JS</label>
+                                </div>
+                                <div class="col-6 col-sm-3 p-0 mb-2">
+                                    <input type="checkbox" id="reactJs">
+                                    <label for="reactJs">React JS</label>
+                                </div>
+                                <div class="w-100 me-5"></div>
+                                <div class="col-6 col-sm-3 p-0 mb-2">
+                                    <input type="checkbox" id="vueJs">
+                                    <label for="vueJs">Vue JS</label>
+                                </div>   
+                                <div class="col-6 col-sm-3 p-0 mb-2">
+                                    <input type="checkbox" id="javaScript">
+                                    <label for="javaScript">Javascript</label>
+                                </div> 
                             </div>
                         </div>
 
                         <!--Project Image-->
-                        <div>
-                            <label >Upload Image</label>
-                            <div>
-                                <div class="project-image-label">
-                                    <div class="label-choose-project-image">
+                        <div class="mb-4">
+                            <label class="fw-semibold fs-5">Upload Image</label>
+                            <div class="w-100 border border-0 rounded-1 p-0 ">
+                                <div class="d-flex ">
+                                    <div class=" bg-secondary text-body-secondary p-2 px-3 rounded-1">
                                         <label for="projectImage">Choose</label>
                                     </div>
-                                    <input class="text-input-project-image" id="textProjectImage" type="text" disabled>
-                                    <label for="projectImage">   
+                                    <input class="border-0 bg-white w-100" id="textProjectImage" type="text" disabled>
+                                    <label for="projectImage" class="d-flex align-items-center bg-white">   
                                         <img src="assets/images/file.png" alt="">                               
                                     </label>
-                                </div>
+                                </div >
                                 <input type="file" id="projectImage" onchange="getFileName()" hidden>
                             </div>
                         </div>
 
                         <!--Button submit-->
-                        <div class="main-button">
-                            <button type="submit" onclick="insertProject(event)">Submit</button>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-dark px-4 py-1" type="submit" onclick="insertProject(event)">Submit</button>
                         </div>
                     </form>
-                </div>
-            </div>
-            <!--Form submit Project-->
-            <!--max 84 karakter-->
-            <div class="container-project">
-                <h1>MY PROJECT</h1>
-                <div class="container-project-lists" id="containerProject">
-                    <div class="project-card default-border">
-                        <img src="assets/images-sample/1.jpg" alt="">
-                        <a style="text-decoration:none" href="detail-project.html"><h2>Project 1</h2></a>
-                            <p>durasi: 3 bulan</p>
-                        <div class="project-card-description">
-                            <p>App that used for dumbways student, it was deployed and can downloaded on playstore.
-                                Happy download Lorem ipsum dolor sit amet
-                            </p>
-                        </div>
-                        <div class="list-icon-tech">
-                            <i class="fa-brands fa-node-js fa-2xl"></i>
-                            <i class="fa-brands fa-react fa-2xl"></i>
-                            <i class="fa-brands fa-vuejs fa-2xl"></i>
-                        </div>
-                        <div class="button-group">
-                            <button class="button-edit">edit</button>
-                            <button class="button-delete">delete</button>
-                        </div>
-                    </div>
-                    <div class="project-card default-border">
-                        <img src="assets/images-sample/2.jpg" alt="">
-                        <a style="text-decoration:none" href="detail-project.html"><h2>Project 2</h2></a>
-                        <p>durasi: 3 bulan</p>
-                        <div class="project-card-description">
-                            <p>App that used for dumbways student, it was deployed and can downloaded on playstore.
-                                Happy download Lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div class="list-icon-tech">
-                            <i class="fa-brands fa-node-js fa-2xl"></i>
-                            <i class="fa-brands fa-react fa-2xl"></i>
-                            <i class="fa-brands fa-vuejs fa-2xl"></i>
-                        </div>
-                        <div class="button-group">
-                            <button class="button-edit">edit</button>
-                            <button class="button-delete">delete</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
